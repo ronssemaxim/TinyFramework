@@ -1,0 +1,26 @@
+{% extends "layout.twig" %}
+
+{% set pageTitle = "Login" %}
+
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="{{ app.baseUrl }}styles/form.css" />
+	<link rel="stylesheet" type="text/css" href="{{ app.baseUrl }}styles/login.css" />
+{% endblock %}
+
+{% block pageContent %}
+	<h3>Login</h3>
+  {% if form.hasErrors() %}  
+    <h4 class="topBar error">Error</h4>
+    <div class="fancy error">
+      The following errors occured while trying to log you in:
+      {% for lbl, error in form.getErrorStrings() %}
+          <p>In {{ lbl }}: {{ error }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+	<form action="#" method="post" novalidate="novalidate">
+    {% for formElement in form.elements%}
+      {{ formElement.getHtml()|raw }}
+    {% endfor %}
+	</form>
+{% endblock %}

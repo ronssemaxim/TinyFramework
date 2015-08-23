@@ -1,0 +1,54 @@
+Date: 17/08/2015 15:17:06
+Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 589: Undefined index: testt
+Log id: i26a8b77b469dcf6bf056a62a55dd14a
+
+Trace: 
+array(2) {
+  [0]=>
+  array(6) {
+    ["file"]=>
+    string(45) "C:\xampp\htdocs\tf\includes\TinyFramework.php"
+    ["line"]=>
+    int(589)
+    ["function"]=>
+    string(12) "fatalHandler"
+    ["class"]=>
+    string(13) "TinyFramework"
+    ["type"]=>
+    string(2) "->"
+    ["args"]=>
+    array(5) {
+      [0]=>
+      &int(8)
+      [1]=>
+      &string(22) "Undefined index: testt"
+      [2]=>
+      &string(45) "C:\xampp\htdocs\tf\includes\TinyFramework.php"
+      [3]=>
+      &int(589)
+      [4]=>
+      &array(1) {
+        ["offset"]=>
+        string(5) "testt"
+      }
+    }
+  }
+  [1]=>
+  array(6) {
+    ["file"]=>
+    string(28) "C:\xampp\htdocs\tf\index.php"
+    ["line"]=>
+    int(16)
+    ["function"]=>
+    string(9) "offsetGet"
+    ["class"]=>
+    string(13) "TinyFramework"
+    ["type"]=>
+    string(2) "->"
+    ["args"]=>
+    array(1) {
+      [0]=>
+      &string(5) "testt"
+    }
+  }
+}

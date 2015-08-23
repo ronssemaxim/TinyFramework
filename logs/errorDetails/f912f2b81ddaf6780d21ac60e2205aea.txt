@@ -1,0 +1,80 @@
+Date: 17/08/2015 15:42:19
+Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 151: Missing argument 2 for TinyFramework::AddDB(), called in C:\xampp\htdocs\tf\index.php on line 19 and defined
+Log id: f912f2b81ddaf6780d21ac60e2205aea
+
+Trace: 
+array(2) {
+  [0]=>
+  array(6) {
+    ["file"]=>
+    string(45) "C:\xampp\htdocs\tf\includes\TinyFramework.php"
+    ["line"]=>
+    int(151)
+    ["function"]=>
+    string(12) "fatalHandler"
+    ["class"]=>
+    string(13) "TinyFramework"
+    ["type"]=>
+    string(2) "->"
+    ["args"]=>
+    array(5) {
+      [0]=>
+      &int(2)
+      [1]=>
+      &string(108) "Missing argument 2 for TinyFramework::AddDB(), called in C:\xampp\htdocs\tf\index.php on line 19 and defined"
+      [2]=>
+      &string(45) "C:\xampp\htdocs\tf\includes\TinyFramework.php"
+      [3]=>
+      &int(151)
+      [4]=>
+      &array(1) {
+        ["name"]=>
+        array(6) {
+          ["name"]=>
+          string(4) "Test"
+          ["driver"]=>
+          string(5) "mysql"
+          ["host"]=>
+          string(9) "localhost"
+          ["db"]=>
+          string(8) "database"
+          ["user"]=>
+          string(8) "username"
+          ["pass"]=>
+          string(8) "password"
+        }
+      }
+    }
+  }
+  [1]=>
+  array(6) {
+    ["file"]=>
+    string(28) "C:\xampp\htdocs\tf\index.php"
+    ["line"]=>
+    int(19)
+    ["function"]=>
+    string(5) "AddDB"
+    ["class"]=>
+    string(13) "TinyFramework"
+    ["type"]=>
+    string(2) "->"
+    ["args"]=>
+    array(1) {
+      [0]=>
+      &array(6) {
+        ["name"]=>
+        string(4) "Test"
+        ["driver"]=>
+        string(5) "mysql"
+        ["host"]=>
+        string(9) "localhost"
+        ["db"]=>
+        string(8) "database"
+        ["user"]=>
+        string(8) "username"
+        ["pass"]=>
+        string(8) "password"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{% extends "layout.twig" %}
+
+{% set pageTitle = "Logged out" %}
+
+{% block css %}
+{% endblock %}
+
+{% block pageContent %}
+	<h3>Logged out</h3>
+	<p>You are now logged out!</p>
+	<a href="{{ app.getUrl('auth.login') }}">Continue</a>
+{% endblock %}

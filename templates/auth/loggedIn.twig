@@ -1,0 +1,12 @@
+{% extends "layout.twig" %}
+
+{% set pageTitle = "Logged in" %}
+
+{% block css %}
+{% endblock %}
+
+{% block pageContent %}
+	<h3>Welcome</h3>
+	<p>Welcome, {{ user.ID }}; You are now logged in!</p>
+	<a href="{{ app.getUrl('home') }}">Continue</a>
+{% endblock %}

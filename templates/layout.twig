@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>{{ pageTitle|raw }}</title>
+	{% block css %}{% endblock %}
+</head>
+<body>
+	<header>
+		<h1><a href="{{ app.getUrl('home') }}">My super awesome website</a></h1>
+		<nav>
+			<ul>
+				<li><a href="{{ app.getUrl('home') }}">Home</a></li>
+				<li class="right"><a href="{{ app.getUrl('auth.login') }}">Login</a></li>
+			</ul>
+		</nav>
+	</header>
+	<middle>
+		{% block pageContent %}
+			Hello!
+		{% endblock %}
+	</middle>
+	<footer>
+		Site designed by <a href="http://www.ronssemaxim.be/hosting/">Maxim Ronsse</a>.
+	</footer>
+	{% block js %}{% endblock %}
+</body>
+</html>

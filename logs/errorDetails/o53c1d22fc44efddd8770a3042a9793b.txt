@@ -1,0 +1,131 @@
+Date: 17/08/2015 15:18:35
+Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 32: A session had already been started - ignoring session_start()
+Log id: o53c1d22fc44efddd8770a3042a9793b
+
+Trace: 
+array(5) {
+  [0]=>
+  array(4) {
+    ["function"]=>
+    string(12) "fatalHandler"
+    ["class"]=>
+    string(13) "TinyFramework"
+    ["type"]=>
+    string(2) "->"
+    ["args"]=>
+    array(5) {
+      [0]=>
+      &int(8)
+      [1]=>
+      &string(61) "A session had already been started - ignoring session_start()"
+      [2]=>
+      &string(45) "C:\xampp\htdocs\tf\includes\TinyFramework.php"
+      [3]=>
+      &int(32)
+      [4]=>
+      &array(5) {
+        ["routes"]=>
+        array(0) {
+        }
+        ["debug"]=>
+        bool(false)
+        ["rethrowException"]=>
+        bool(true)
+        ["autorun"]=>
+        bool(false)
+        ["this"]=>
+        object(TinyFramework)#4 (11) {
+          ["routes"]=>
+          NULL
+          ["baseUrl"]=>
+          NULL
+          ["relativeUrl"]=>
+          NULL
+          ["db"]=>
+          array(0) {
+          }
+          ["allowEmptyVariables"]=>
+          bool(true)
+          ["controllerDir":"TinyFramework":private]=>
+          string(14) "./controllers/"
+          ["controllers":"TinyFramework":private]=>
+          array(0) {
+          }
+          ["defaultUrl":"TinyFramework":private]=>
+          NULL
+          ["hasAbsoluteUrls":"TinyFramework":private]=>
+          bool(false)
+          ["debug":"TinyFramework":private]=>
+          bool(false)
+          ["customVars":"TinyFramework":private]=>
+          array(0) {
+          }
+        }
+      }
+    }
+  }
+  [1]=>
+  array(4) {
+    ["file"]=>
+    string(45) "C:\xampp\htdocs\tf\includes\TinyFramework.php"
+    ["line"]=>
+    int(32)
+    ["function"]=>
+    string(13) "session_start"
+    ["args"]=>
+    array(0) {
+    }
+  }
+  [2]=>
+  array(6) {
+    ["file"]=>
+    string(45) "C:\xampp\htdocs\tf\includes\TinyFramework.php"
+    ["line"]=>
+    int(607)
+    ["function"]=>
+    string(11) "__construct"
+    ["class"]=>
+    string(13) "TinyFramework"
+    ["type"]=>
+    string(2) "->"
+    ["args"]=>
+    array(0) {
+    }
+  }
+  [3]=>
+  array(6) {
+    ["file"]=>
+    string(45) "C:\xampp\htdocs\tf\includes\TinyFramework.php"
+    ["line"]=>
+    int(579)
+    ["function"]=>
+    string(14) "propertyExists"
+    ["class"]=>
+    string(13) "TinyFramework"
+    ["type"]=>
+    string(2) "->"
+    ["args"]=>
+    array(1) {
+      [0]=>
+      &string(2) "db"
+    }
+  }
+  [4]=>
+  array(6) {
+    ["file"]=>
+    string(28) "C:\xampp\htdocs\tf\index.php"
+    ["line"]=>
+    int(16)
+    ["function"]=>
+    string(12) "offsetExists"
+    ["class"]=>
+    string(13) "TinyFramework"
+    ["type"]=>
+    string(2) "->"
+    ["args"]=>
+    array(1) {
+      [0]=>
+      &string(2) "db"
+    }
+  }
+}

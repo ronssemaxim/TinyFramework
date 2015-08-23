@@ -1,0 +1,32 @@
+17/08/2015 15:17:06	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 589: Undefined index: testt. Log id: i26a8b77b469dcf6bf056a62a55dd14a
+17/08/2015 15:17:51	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 32: A session had already been started - ignoring session_start(). Log id: ib5b5f1b29e4ca137e205135c3b74a81
+17/08/2015 15:18:35	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 32: A session had already been started - ignoring session_start(). Log id: o53c1d22fc44efddd8770a3042a9793b
+17/08/2015 15:18:47	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 32: A session had already been started - ignoring session_start(). Log id: l07710d88c288ed135848ff4d763aa8c
+17/08/2015 15:19:19	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 32: A session had already been started - ignoring session_start(). Log id: c975b7e7ae9ac17dd5a3fae992109821
+17/08/2015 15:19:19	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 32: A session had already been started - ignoring session_start(). Log id: m975b7e7ae9ac17dd5a3fae992109821
+17/08/2015 15:19:20	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 32: A session had already been started - ignoring session_start(). Log id: m9c52e3c97eead2ad1458b70d08befdd
+17/08/2015 15:42:19	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 151: Missing argument 2 for TinyFramework::AddDB(), called in C:\xampp\htdocs\tf\index.php on line 19 and defined. Log id: f912f2b81ddaf6780d21ac60e2205aea
+17/08/2015 15:44:28	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 151: Missing argument 4 for TinyFramework::AddDB(), called in C:\xampp\htdocs\tf\index.php on line 19 and defined. Log id: p3d5da88a16f6ed6f497b6c99a6816cd
+17/08/2015 15:46:06	Fatal Error thrown in C:\xampp\htdocs\tf\controllers\HomeController.php on line 33: Undefined property: TinyFramework::$dbs. Log id: be37364144e55ee90b76bd725422029e
+17/08/2015 15:50:52	Fatal Error thrown in C:\xampp\htdocs\tf\includes\IController.php on line 88: call_user_func_array() expects parameter 1 to be a valid callback, class 'HomeController' does not have a method 'test3'. Log id: w040cf0383ae87f42ae99330d8212693
+18/08/2015 11:13:15	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: t388f205abacdb4825ab698e75e0bcaf
+18/08/2015 11:14:23	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: f5a97dd8e9ce000afa586b232adf235b
+18/08/2015 11:15:29	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: jc63a0d66fbd2cbbd77a3a3b0cb8e0f1
+18/08/2015 11:17:14	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: v0bf3c0871f51c08125476274a1c2f0d
+18/08/2015 11:19:51	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: p5567679fd1b02972fb502d196160e51
+18/08/2015 11:22:13	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 606: Undefined variable: baseUrl. Log id: k42b9f7acc276bf3d4b0e4eff54d1e0f
+18/08/2015 11:25:50	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: h0fdc83b0c67c6824d68ea8fcf05c427
+18/08/2015 11:29:00	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: l19cfdf53d10a0f2dd2eefdd90728bd1
+18/08/2015 11:30:27	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 606: Undefined variable: baseUrl. Log id: g695704206832e4f208f94968c04e0b8
+18/08/2015 11:31:42	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: z4f2106c343906c9827ffc5c0f785208
+18/08/2015 11:32:28	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: g4cab01013ea69b93b9ebd28a232f000
+18/08/2015 11:33:10	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: idb34a255b7b5ce79f16e21efbee0442
+18/08/2015 11:34:26	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: m2711865088015eb4caf263c5e769699
+18/08/2015 11:34:41	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: z26cd078bac1f2efe9a6baad8093993d
+18/08/2015 11:35:26	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 280: Object of class Form could not be converted to string. Log id: w2270a3dbf5a05d8fc357fb0b623f2f5
+18/08/2015 11:35:26	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 280: Object of class Form could not be converted to string. Log id: a2270a3dbf5a05d8fc357fb0b623f2f5
+18/08/2015 11:35:40	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: q4163521beb0f75b0bfc3df4ad2015bd
+18/08/2015 11:40:31	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: zecfaa6ae31981b5a65994b6be828ab2
+18/08/2015 11:41:42	Fatal Error thrown in C:\xampp\htdocs\tf\includes\TinyFramework.php on line 604: Undefined variable: baseUrl. Log id: rc1904bbba75962dd81e47772140091d
+18/08/2015 11:44:29	Error thrown in C:\xampp\htdocs\tf\includes\Twig\Template.php on line 160: An exception has been thrown during the rendering of a template ("Error Processing Request") in "auth/login.twig" at line 6.. Log id: p8da1cd4127ee2775f9bae4fda201847
+18/08/2015 11:46:42	Error thrown in C:\xampp\htdocs\tf\includes\Twig\Template.php on line 160: An exception has been thrown during the rendering of a template ("Error Processing Request") in "auth/login.twig" at line 6.. Log id: z47acd1710abe5ce37af64282eae9af8

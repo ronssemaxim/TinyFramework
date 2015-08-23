@@ -1,0 +1,2139 @@
+Date: 17/08/2015 15:46:06
+Fatal Error thrown in C:\xampp\htdocs\tf\controllers\HomeController.php on line 33: Undefined property: TinyFramework::$dbs
+Log id: be37364144e55ee90b76bd725422029e
+
+Trace: 
+array(6) {
+  [0]=>
+  array(6) {
+    ["file"]=>
+    string(49) "C:\xampp\htdocs\tf\controllers\HomeController.php"
+    ["line"]=>
+    int(33)
+    ["function"]=>
+    string(12) "fatalHandler"
+    ["class"]=>
+    string(13) "TinyFramework"
+    ["type"]=>
+    string(2) "->"
+    ["args"]=>
+    array(5) {
+      [0]=>
+      &int(8)
+      [1]=>
+      &string(39) "Undefined property: TinyFramework::$dbs"
+      [2]=>
+      &string(49) "C:\xampp\htdocs\tf\controllers\HomeController.php"
+      [3]=>
+      &int(33)
+      [4]=>
+      &array(1) {
+        ["app"]=>
+        object(TinyFramework)#1 (12) {
+          ["routes"]=>
+          array(2) {
+            ["/home"]=>
+            string(14) "HomeController"
+            ["/auth"]=>
+            string(14) "AuthController"
+          }
+          ["baseUrl"]=>
+          string(4) "/tf/"
+          ["relativeUrl"]=>
+          array(2) {
+            [0]=>
+            string(0) ""
+            [1]=>
+            string(4) "test"
+          }
+          ["db"]=>
+          array(1) {
+            ["Test"]=>
+            object(DB)#2 (3) {
+              ["pdo":"DB":private]=>
+              NULL
+              ["tableDir"]=>
+              string(14) "includes/Data/"
+              ["tables"]=>
+              array(1) {
+                ["mysqlTable"]=>
+                object(TestTable)#3 (2) {
+                  ["db"]=>
+                  *RECURSION*
+                  ["tableName"]=>
+                  string(10) "mysqlTable"
+                }
+              }
+            }
+          }
+          ["allowEmptyVariables"]=>
+          bool(true)
+          ["controllerDir":"TinyFramework":private]=>
+          string(14) "./controllers/"
+          ["controllers":"TinyFramework":private]=>
+          array(2) {
+            ["HomeController"]=>
+            object(HomeController)#4 (7) {
+              ["itemsPerPage":"HomeController":private]=>
+              int(50)
+              ["routes"]=>
+              array(4) {
+                ["home"]=>
+                array(3) {
+                  ["function"]=>
+                  string(4) "home"
+                  ["name"]=>
+                  string(4) "home"
+                  ["url"]=>
+                  string(1) "/"
+                }
+                ["test"]=>
+                array(3) {
+                  ["function"]=>
+                  string(4) "test"
+                  ["name"]=>
+                  string(4) "test"
+                  ["url"]=>
+                  string(5) "/test"
+                }
+                ["test2"]=>
+                array(3) {
+                  ["function"]=>
+                  string(5) "test2"
+                  ["name"]=>
+                  string(5) "test2"
+                  ["url"]=>
+                  string(23) "/parameter/{var:\regex}"
+                }
+                ["test3"]=>
+                array(3) {
+                  ["function"]=>
+                  string(5) "test3"
+                  ["name"]=>
+                  string(5) "test3"
+                  ["url"]=>
+                  string(28) "/parameterWithoutRegex/{var}"
+                }
+              }
+              ["relativeUrl"]=>
+              string(5) "/home"
+              ["twig"]=>
+              object(Twig_Environment)#7 (26) {
+                ["charset":protected]=>
+                string(5) "UTF-8"
+                ["loader":protected]=>
+                object(Twig_Loader_Filesystem)#6 (2) {
+                  ["paths":protected]=>
+                  array(1) {
+                    ["__main__"]=>
+                    array(1) {
+                      [0]=>
+                      string(9) "templates"
+                    }
+                  }
+                  ["cache":protected]=>
+                  array(0) {
+                  }
+                }
+                ["debug":protected]=>
+                bool(true)
+                ["autoReload":protected]=>
+                bool(true)
+                ["cache":protected]=>
+                bool(false)
+                ["lexer":protected]=>
+                NULL
+                ["parser":protected]=>
+                NULL
+                ["compiler":protected]=>
+                NULL
+                ["baseTemplateClass":protected]=>
+                string(13) "Twig_Template"
+                ["extensions":protected]=>
+                array(4) {
+                  ["core"]=>
+                  object(Twig_Extension_Core)#8 (4) {
+                    ["dateFormats":protected]=>
+                    array(2) {
+                      [0]=>
+                      string(10) "F j, Y H:i"
+                      [1]=>
+                      string(7) "%d days"
+                    }
+                    ["numberFormat":protected]=>
+                    array(3) {
+                      [0]=>
+                      int(0)
+                      [1]=>
+                      string(1) "."
+                      [2]=>
+                      string(1) ","
+                    }
+                    ["timezone":protected]=>
+                    NULL
+                    ["escapers":protected]=>
+                    array(0) {
+                    }
+                  }
+                  ["escaper"]=>
+                  object(Twig_Extension_Escaper)#9 (1) {
+                    ["defaultStrategy":protected]=>
+                    string(4) "html"
+                  }
+                  ["optimizer"]=>
+                  object(Twig_Extension_Optimizer)#10 (1) {
+                    ["optimizers":protected]=>
+                    int(-1)
+                  }
+                  ["debug"]=>
+                  object(Twig_Extension_Debug)#14 (0) {
+                  }
+                }
+                ["parsers":protected]=>
+                NULL
+                ["visitors":protected]=>
+                NULL
+                ["filters":protected]=>
+                NULL
+                ["tests":protected]=>
+                NULL
+                ["functions":protected]=>
+                NULL
+                ["globals":protected]=>
+                NULL
+                ["runtimeInitialized":protected]=>
+                bool(false)
+                ["extensionInitialized":protected]=>
+                bool(false)
+                ["loadedTemplates":protected]=>
+                NULL
+                ["strictVariables":protected]=>
+                bool(false)
+                ["unaryOperators":protected]=>
+                NULL
+                ["binaryOperators":protected]=>
+                NULL
+                ["templateClassPrefix":protected]=>
+                string(15) "__TwigTemplate_"
+                ["functionCallbacks":protected]=>
+                array(0) {
+                }
+                ["filterCallbacks":protected]=>
+                array(0) {
+                }
+                ["staging":protected]=>
+                object(Twig_Extension_Staging)#11 (6) {
+                  ["functions":protected]=>
+                  array(1) {
+                    ["static"]=>
+                    object(Twig_SimpleFunction)#12 (4) {
+                      ["name":protected]=>
+                      string(6) "static"
+                      ["callable":protected]=>
+                      object(Closure)#13 (2) {
+                        ["this"]=>
+                        *RECURSION*
+                        ["parameter"]=>
+                        array(2) {
+                          ["$class"]=>
+                          string(10) "<required>"
+                          ["$property"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["options":protected]=>
+                      array(5) {
+                        ["needs_environment"]=>
+                        bool(false)
+                        ["needs_context"]=>
+                        bool(false)
+                        ["is_safe"]=>
+                        NULL
+                        ["is_safe_callback"]=>
+                        NULL
+                        ["node_class"]=>
+                        string(29) "Twig_Node_Expression_Function"
+                      }
+                      ["arguments":protected]=>
+                      array(0) {
+                      }
+                    }
+                  }
+                  ["filters":protected]=>
+                  array(0) {
+                  }
+                  ["visitors":protected]=>
+                  array(0) {
+                  }
+                  ["tokenParsers":protected]=>
+                  array(0) {
+                  }
+                  ["globals":protected]=>
+                  array(2) {
+                    ["app"]=>
+                    *RECURSION*
+                    ["session"]=>
+                    array(3) {
+                      ["_sf2_attributes"]=>
+                      array(2) {
+                        ["user"]=>
+                        array(13) {
+                          ["id"]=>
+                          string(1) "1"
+                          ["firstname"]=>
+                          string(5) "Maxim"
+                          ["surname"]=>
+                          string(6) "Ronsse"
+                          ["password"]=>
+                          string(102) "$6$WVQ2E9r3BdUc$9Jg6Q7d7.d6sVhTuTW4SVtrNG4CzKC9Iyu3JTveTN8afav9ouMJYRnuNXlwxwhqgAXzXVFI.mF1R1zRv.Zch40"
+                          ["email"]=>
+                          string(21) "ronsse.maxim@gmail.co"
+                          ["companyId"]=>
+                          string(1) "1"
+                          ["description"]=>
+                          string(15) "NOPE NOPE NOPEY"
+                          ["function"]=>
+                          string(6) "IT PRO"
+                          ["hasProfilePic"]=>
+                          string(1) "0"
+                          ["quotaId"]=>
+                          string(1) "2"
+                          ["groupsMade"]=>
+                          string(1) "1"
+                          ["admin"]=>
+                          string(1) "1"
+                          ["registered"]=>
+                          string(19) "2015-06-16 20:06:35"
+                        }
+                        ["clipboard"]=>
+                        array(0) {
+                        }
+                      }
+                      ["_sf2_flashes"]=>
+                      array(0) {
+                      }
+                      ["_sf2_meta"]=>
+                      array(3) {
+                        ["u"]=>
+                        int(1439585821)
+                        ["c"]=>
+                        int(1439585690)
+                        ["l"]=>
+                        string(1) "0"
+                      }
+                    }
+                  }
+                  ["tests":protected]=>
+                  array(0) {
+                  }
+                }
+              }
+              ["hasAbsoluteUrls"]=>
+              bool(false)
+              ["default":"BaseController":private]=>
+              array(1) {
+                ["function"]=>
+                string(4) "home"
+              }
+              ["onCheckFailure":"BaseController":private]=>
+              NULL
+            }
+            ["AuthController"]=>
+            object(AuthController)#5 (6) {
+              ["routes"]=>
+              array(2) {
+                ["auth.login"]=>
+                array(3) {
+                  ["function"]=>
+                  string(5) "login"
+                  ["name"]=>
+                  string(10) "auth.login"
+                  ["url"]=>
+                  string(6) "/login"
+                }
+                ["auth.logout"]=>
+                array(4) {
+                  ["function"]=>
+                  string(6) "logout"
+                  ["name"]=>
+                  string(11) "auth.logout"
+                  ["checkBefore"]=>
+                  string(10) "IsLoggedIn"
+                  ["url"]=>
+                  string(7) "/logout"
+                }
+              }
+              ["relativeUrl"]=>
+              string(5) "/auth"
+              ["twig"]=>
+              NULL
+              ["hasAbsoluteUrls"]=>
+              bool(false)
+              ["default":"BaseController":private]=>
+              array(1) {
+                ["function"]=>
+                string(5) "login"
+              }
+              ["onCheckFailure":"BaseController":private]=>
+              array(1) {
+                ["redirect"]=>
+                string(4) "home"
+              }
+            }
+          }
+          ["defaultUrl":"TinyFramework":private]=>
+          string(5) "/home"
+          ["hasAbsoluteUrls":"TinyFramework":private]=>
+          bool(false)
+          ["debug":"TinyFramework":private]=>
+          bool(true)
+          ["customVars":"TinyFramework":private]=>
+          array(0) {
+          }
+          ["controller"]=>
+          object(AuthController)#5 (6) {
+            ["routes"]=>
+            array(2) {
+              ["auth.login"]=>
+              array(3) {
+                ["function"]=>
+                string(5) "login"
+                ["name"]=>
+                string(10) "auth.login"
+                ["url"]=>
+                string(6) "/login"
+              }
+              ["auth.logout"]=>
+              array(4) {
+                ["function"]=>
+                string(6) "logout"
+                ["name"]=>
+                string(11) "auth.logout"
+                ["checkBefore"]=>
+                string(10) "IsLoggedIn"
+                ["url"]=>
+                string(7) "/logout"
+              }
+            }
+            ["relativeUrl"]=>
+            string(5) "/auth"
+            ["twig"]=>
+            NULL
+            ["hasAbsoluteUrls"]=>
+            bool(false)
+            ["default":"BaseController":private]=>
+            array(1) {
+              ["function"]=>
+              string(5) "login"
+            }
+            ["onCheckFailure":"BaseController":private]=>
+            array(1) {
+              ["redirect"]=>
+              string(4) "home"
+            }
+          }
+        }
+      }
+    }
+  }
+  [1]=>
+  array(4) {
+    ["function"]=>
+    string(4) "test"
+    ["class"]=>
+    string(14) "HomeController"
+    ["type"]=>
+    string(2) "->"
+    ["args"]=>
+    array(1) {
+      [0]=>
+      object(TinyFramework)#1 (12) {
+        ["routes"]=>
+        array(2) {
+          ["/home"]=>
+          string(14) "HomeController"
+          ["/auth"]=>
+          string(14) "AuthController"
+        }
+        ["baseUrl"]=>
+        string(4) "/tf/"
+        ["relativeUrl"]=>
+        array(2) {
+          [0]=>
+          string(0) ""
+          [1]=>
+          string(4) "test"
+        }
+        ["db"]=>
+        array(1) {
+          ["Test"]=>
+          object(DB)#2 (3) {
+            ["pdo":"DB":private]=>
+            NULL
+            ["tableDir"]=>
+            string(14) "includes/Data/"
+            ["tables"]=>
+            array(1) {
+              ["mysqlTable"]=>
+              object(TestTable)#3 (2) {
+                ["db"]=>
+                *RECURSION*
+                ["tableName"]=>
+                string(10) "mysqlTable"
+              }
+            }
+          }
+        }
+        ["allowEmptyVariables"]=>
+        bool(true)
+        ["controllerDir":"TinyFramework":private]=>
+        string(14) "./controllers/"
+        ["controllers":"TinyFramework":private]=>
+        array(2) {
+          ["HomeController"]=>
+          object(HomeController)#4 (7) {
+            ["itemsPerPage":"HomeController":private]=>
+            int(50)
+            ["routes"]=>
+            array(4) {
+              ["home"]=>
+              array(3) {
+                ["function"]=>
+                string(4) "home"
+                ["name"]=>
+                string(4) "home"
+                ["url"]=>
+                string(1) "/"
+              }
+              ["test"]=>
+              array(3) {
+                ["function"]=>
+                string(4) "test"
+                ["name"]=>
+                string(4) "test"
+                ["url"]=>
+                string(5) "/test"
+              }
+              ["test2"]=>
+              array(3) {
+                ["function"]=>
+                string(5) "test2"
+                ["name"]=>
+                string(5) "test2"
+                ["url"]=>
+                string(23) "/parameter/{var:\regex}"
+              }
+              ["test3"]=>
+              array(3) {
+                ["function"]=>
+                string(5) "test3"
+                ["name"]=>
+                string(5) "test3"
+                ["url"]=>
+                string(28) "/parameterWithoutRegex/{var}"
+              }
+            }
+            ["relativeUrl"]=>
+            string(5) "/home"
+            ["twig"]=>
+            object(Twig_Environment)#7 (26) {
+              ["charset":protected]=>
+              string(5) "UTF-8"
+              ["loader":protected]=>
+              object(Twig_Loader_Filesystem)#6 (2) {
+                ["paths":protected]=>
+                array(1) {
+                  ["__main__"]=>
+                  array(1) {
+                    [0]=>
+                    string(9) "templates"
+                  }
+                }
+                ["cache":protected]=>
+                array(0) {
+                }
+              }
+              ["debug":protected]=>
+              bool(true)
+              ["autoReload":protected]=>
+              bool(true)
+              ["cache":protected]=>
+              bool(false)
+              ["lexer":protected]=>
+              NULL
+              ["parser":protected]=>
+              NULL
+              ["compiler":protected]=>
+              NULL
+              ["baseTemplateClass":protected]=>
+              string(13) "Twig_Template"
+              ["extensions":protected]=>
+              array(4) {
+                ["core"]=>
+                object(Twig_Extension_Core)#8 (4) {
+                  ["dateFormats":protected]=>
+                  array(2) {
+                    [0]=>
+                    string(10) "F j, Y H:i"
+                    [1]=>
+                    string(7) "%d days"
+                  }
+                  ["numberFormat":protected]=>
+                  array(3) {
+                    [0]=>
+                    int(0)
+                    [1]=>
+                    string(1) "."
+                    [2]=>
+                    string(1) ","
+                  }
+                  ["timezone":protected]=>
+                  NULL
+                  ["escapers":protected]=>
+                  array(0) {
+                  }
+                }
+                ["escaper"]=>
+                object(Twig_Extension_Escaper)#9 (1) {
+                  ["defaultStrategy":protected]=>
+                  string(4) "html"
+                }
+                ["optimizer"]=>
+                object(Twig_Extension_Optimizer)#10 (1) {
+                  ["optimizers":protected]=>
+                  int(-1)
+                }
+                ["debug"]=>
+                object(Twig_Extension_Debug)#14 (0) {
+                }
+              }
+              ["parsers":protected]=>
+              NULL
+              ["visitors":protected]=>
+              NULL
+              ["filters":protected]=>
+              NULL
+              ["tests":protected]=>
+              NULL
+              ["functions":protected]=>
+              NULL
+              ["globals":protected]=>
+              NULL
+              ["runtimeInitialized":protected]=>
+              bool(false)
+              ["extensionInitialized":protected]=>
+              bool(false)
+              ["loadedTemplates":protected]=>
+              NULL
+              ["strictVariables":protected]=>
+              bool(false)
+              ["unaryOperators":protected]=>
+              NULL
+              ["binaryOperators":protected]=>
+              NULL
+              ["templateClassPrefix":protected]=>
+              string(15) "__TwigTemplate_"
+              ["functionCallbacks":protected]=>
+              array(0) {
+              }
+              ["filterCallbacks":protected]=>
+              array(0) {
+              }
+              ["staging":protected]=>
+              object(Twig_Extension_Staging)#11 (6) {
+                ["functions":protected]=>
+                array(1) {
+                  ["static"]=>
+                  object(Twig_SimpleFunction)#12 (4) {
+                    ["name":protected]=>
+                    string(6) "static"
+                    ["callable":protected]=>
+                    object(Closure)#13 (2) {
+                      ["this"]=>
+                      *RECURSION*
+                      ["parameter"]=>
+                      array(2) {
+                        ["$class"]=>
+                        string(10) "<required>"
+                        ["$property"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["options":protected]=>
+                    array(5) {
+                      ["needs_environment"]=>
+                      bool(false)
+                      ["needs_context"]=>
+                      bool(false)
+                      ["is_safe"]=>
+                      NULL
+                      ["is_safe_callback"]=>
+                      NULL
+                      ["node_class"]=>
+                      string(29) "Twig_Node_Expression_Function"
+                    }
+                    ["arguments":protected]=>
+                    array(0) {
+                    }
+                  }
+                }
+                ["filters":protected]=>
+                array(0) {
+                }
+                ["visitors":protected]=>
+                array(0) {
+                }
+                ["tokenParsers":protected]=>
+                array(0) {
+                }
+                ["globals":protected]=>
+                array(2) {
+                  ["app"]=>
+                  *RECURSION*
+                  ["session"]=>
+                  array(3) {
+                    ["_sf2_attributes"]=>
+                    array(2) {
+                      ["user"]=>
+                      array(13) {
+                        ["id"]=>
+                        string(1) "1"
+                        ["firstname"]=>
+                        string(5) "Maxim"
+                        ["surname"]=>
+                        string(6) "Ronsse"
+                        ["password"]=>
+                        string(102) "$6$WVQ2E9r3BdUc$9Jg6Q7d7.d6sVhTuTW4SVtrNG4CzKC9Iyu3JTveTN8afav9ouMJYRnuNXlwxwhqgAXzXVFI.mF1R1zRv.Zch40"
+                        ["email"]=>
+                        string(21) "ronsse.maxim@gmail.co"
+                        ["companyId"]=>
+                        string(1) "1"
+                        ["description"]=>
+                        string(15) "NOPE NOPE NOPEY"
+                        ["function"]=>
+                        string(6) "IT PRO"
+                        ["hasProfilePic"]=>
+                        string(1) "0"
+                        ["quotaId"]=>
+                        string(1) "2"
+                        ["groupsMade"]=>
+                        string(1) "1"
+                        ["admin"]=>
+                        string(1) "1"
+                        ["registered"]=>
+                        string(19) "2015-06-16 20:06:35"
+                      }
+                      ["clipboard"]=>
+                      array(0) {
+                      }
+                    }
+                    ["_sf2_flashes"]=>
+                    array(0) {
+                    }
+                    ["_sf2_meta"]=>
+                    array(3) {
+                      ["u"]=>
+                      int(1439585821)
+                      ["c"]=>
+                      int(1439585690)
+                      ["l"]=>
+                      string(1) "0"
+                    }
+                  }
+                }
+                ["tests":protected]=>
+                array(0) {
+                }
+              }
+            }
+            ["hasAbsoluteUrls"]=>
+            bool(false)
+            ["default":"BaseController":private]=>
+            array(1) {
+              ["function"]=>
+              string(4) "home"
+            }
+            ["onCheckFailure":"BaseController":private]=>
+            NULL
+          }
+          ["AuthController"]=>
+          object(AuthController)#5 (6) {
+            ["routes"]=>
+            array(2) {
+              ["auth.login"]=>
+              array(3) {
+                ["function"]=>
+                string(5) "login"
+                ["name"]=>
+                string(10) "auth.login"
+                ["url"]=>
+                string(6) "/login"
+              }
+              ["auth.logout"]=>
+              array(4) {
+                ["function"]=>
+                string(6) "logout"
+                ["name"]=>
+                string(11) "auth.logout"
+                ["checkBefore"]=>
+                string(10) "IsLoggedIn"
+                ["url"]=>
+                string(7) "/logout"
+              }
+            }
+            ["relativeUrl"]=>
+            string(5) "/auth"
+            ["twig"]=>
+            NULL
+            ["hasAbsoluteUrls"]=>
+            bool(false)
+            ["default":"BaseController":private]=>
+            array(1) {
+              ["function"]=>
+              string(5) "login"
+            }
+            ["onCheckFailure":"BaseController":private]=>
+            array(1) {
+              ["redirect"]=>
+              string(4) "home"
+            }
+          }
+        }
+        ["defaultUrl":"TinyFramework":private]=>
+        string(5) "/home"
+        ["hasAbsoluteUrls":"TinyFramework":private]=>
+        bool(false)
+        ["debug":"TinyFramework":private]=>
+        bool(true)
+        ["customVars":"TinyFramework":private]=>
+        array(0) {
+        }
+        ["controller"]=>
+        object(AuthController)#5 (6) {
+          ["routes"]=>
+          array(2) {
+            ["auth.login"]=>
+            array(3) {
+              ["function"]=>
+              string(5) "login"
+              ["name"]=>
+              string(10) "auth.login"
+              ["url"]=>
+              string(6) "/login"
+            }
+            ["auth.logout"]=>
+            array(4) {
+              ["function"]=>
+              string(6) "logout"
+              ["name"]=>
+              string(11) "auth.logout"
+              ["checkBefore"]=>
+              string(10) "IsLoggedIn"
+              ["url"]=>
+              string(7) "/logout"
+            }
+          }
+          ["relativeUrl"]=>
+          string(5) "/auth"
+          ["twig"]=>
+          NULL
+          ["hasAbsoluteUrls"]=>
+          bool(false)
+          ["default":"BaseController":private]=>
+          array(1) {
+            ["function"]=>
+            string(5) "login"
+          }
+          ["onCheckFailure":"BaseController":private]=>
+          array(1) {
+            ["redirect"]=>
+            string(4) "home"
+          }
+        }
+      }
+    }
+  }
+  [2]=>
+  array(4) {
+    ["file"]=>
+    string(43) "C:\xampp\htdocs\tf\includes\IController.php"
+    ["line"]=>
+    int(88)
+    ["function"]=>
+    string(20) "call_user_func_array"
+    ["args"]=>
+    array(2) {
+      [0]=>
+      &array(2) {
+        [0]=>
+        object(HomeController)#4 (7) {
+          ["itemsPerPage":"HomeController":private]=>
+          int(50)
+          ["routes"]=>
+          array(4) {
+            ["home"]=>
+            array(3) {
+              ["function"]=>
+              string(4) "home"
+              ["name"]=>
+              string(4) "home"
+              ["url"]=>
+              string(1) "/"
+            }
+            ["test"]=>
+            array(3) {
+              ["function"]=>
+              string(4) "test"
+              ["name"]=>
+              string(4) "test"
+              ["url"]=>
+              string(5) "/test"
+            }
+            ["test2"]=>
+            array(3) {
+              ["function"]=>
+              string(5) "test2"
+              ["name"]=>
+              string(5) "test2"
+              ["url"]=>
+              string(23) "/parameter/{var:\regex}"
+            }
+            ["test3"]=>
+            array(3) {
+              ["function"]=>
+              string(5) "test3"
+              ["name"]=>
+              string(5) "test3"
+              ["url"]=>
+              string(28) "/parameterWithoutRegex/{var}"
+            }
+          }
+          ["relativeUrl"]=>
+          string(5) "/home"
+          ["twig"]=>
+          object(Twig_Environment)#7 (26) {
+            ["charset":protected]=>
+            string(5) "UTF-8"
+            ["loader":protected]=>
+            object(Twig_Loader_Filesystem)#6 (2) {
+              ["paths":protected]=>
+              array(1) {
+                ["__main__"]=>
+                array(1) {
+                  [0]=>
+                  string(9) "templates"
+                }
+              }
+              ["cache":protected]=>
+              array(0) {
+              }
+            }
+            ["debug":protected]=>
+            bool(true)
+            ["autoReload":protected]=>
+            bool(true)
+            ["cache":protected]=>
+            bool(false)
+            ["lexer":protected]=>
+            NULL
+            ["parser":protected]=>
+            NULL
+            ["compiler":protected]=>
+            NULL
+            ["baseTemplateClass":protected]=>
+            string(13) "Twig_Template"
+            ["extensions":protected]=>
+            array(4) {
+              ["core"]=>
+              object(Twig_Extension_Core)#8 (4) {
+                ["dateFormats":protected]=>
+                array(2) {
+                  [0]=>
+                  string(10) "F j, Y H:i"
+                  [1]=>
+                  string(7) "%d days"
+                }
+                ["numberFormat":protected]=>
+                array(3) {
+                  [0]=>
+                  int(0)
+                  [1]=>
+                  string(1) "."
+                  [2]=>
+                  string(1) ","
+                }
+                ["timezone":protected]=>
+                NULL
+                ["escapers":protected]=>
+                array(0) {
+                }
+              }
+              ["escaper"]=>
+              object(Twig_Extension_Escaper)#9 (1) {
+                ["defaultStrategy":protected]=>
+                string(4) "html"
+              }
+              ["optimizer"]=>
+              object(Twig_Extension_Optimizer)#10 (1) {
+                ["optimizers":protected]=>
+                int(-1)
+              }
+              ["debug"]=>
+              object(Twig_Extension_Debug)#14 (0) {
+              }
+            }
+            ["parsers":protected]=>
+            NULL
+            ["visitors":protected]=>
+            NULL
+            ["filters":protected]=>
+            NULL
+            ["tests":protected]=>
+            NULL
+            ["functions":protected]=>
+            NULL
+            ["globals":protected]=>
+            NULL
+            ["runtimeInitialized":protected]=>
+            bool(false)
+            ["extensionInitialized":protected]=>
+            bool(false)
+            ["loadedTemplates":protected]=>
+            NULL
+            ["strictVariables":protected]=>
+            bool(false)
+            ["unaryOperators":protected]=>
+            NULL
+            ["binaryOperators":protected]=>
+            NULL
+            ["templateClassPrefix":protected]=>
+            string(15) "__TwigTemplate_"
+            ["functionCallbacks":protected]=>
+            array(0) {
+            }
+            ["filterCallbacks":protected]=>
+            array(0) {
+            }
+            ["staging":protected]=>
+            object(Twig_Extension_Staging)#11 (6) {
+              ["functions":protected]=>
+              array(1) {
+                ["static"]=>
+                object(Twig_SimpleFunction)#12 (4) {
+                  ["name":protected]=>
+                  string(6) "static"
+                  ["callable":protected]=>
+                  object(Closure)#13 (2) {
+                    ["this"]=>
+                    *RECURSION*
+                    ["parameter"]=>
+                    array(2) {
+                      ["$class"]=>
+                      string(10) "<required>"
+                      ["$property"]=>
+                      string(10) "<required>"
+                    }
+                  }
+                  ["options":protected]=>
+                  array(5) {
+                    ["needs_environment"]=>
+                    bool(false)
+                    ["needs_context"]=>
+                    bool(false)
+                    ["is_safe"]=>
+                    NULL
+                    ["is_safe_callback"]=>
+                    NULL
+                    ["node_class"]=>
+                    string(29) "Twig_Node_Expression_Function"
+                  }
+                  ["arguments":protected]=>
+                  array(0) {
+                  }
+                }
+              }
+              ["filters":protected]=>
+              array(0) {
+              }
+              ["visitors":protected]=>
+              array(0) {
+              }
+              ["tokenParsers":protected]=>
+              array(0) {
+              }
+              ["globals":protected]=>
+              array(2) {
+                ["app"]=>
+                object(TinyFramework)#1 (12) {
+                  ["routes"]=>
+                  array(2) {
+                    ["/home"]=>
+                    string(14) "HomeController"
+                    ["/auth"]=>
+                    string(14) "AuthController"
+                  }
+                  ["baseUrl"]=>
+                  string(4) "/tf/"
+                  ["relativeUrl"]=>
+                  array(2) {
+                    [0]=>
+                    string(0) ""
+                    [1]=>
+                    string(4) "test"
+                  }
+                  ["db"]=>
+                  array(1) {
+                    ["Test"]=>
+                    object(DB)#2 (3) {
+                      ["pdo":"DB":private]=>
+                      NULL
+                      ["tableDir"]=>
+                      string(14) "includes/Data/"
+                      ["tables"]=>
+                      array(1) {
+                        ["mysqlTable"]=>
+                        object(TestTable)#3 (2) {
+                          ["db"]=>
+                          *RECURSION*
+                          ["tableName"]=>
+                          string(10) "mysqlTable"
+                        }
+                      }
+                    }
+                  }
+                  ["allowEmptyVariables"]=>
+                  bool(true)
+                  ["controllerDir":"TinyFramework":private]=>
+                  string(14) "./controllers/"
+                  ["controllers":"TinyFramework":private]=>
+                  array(2) {
+                    ["HomeController"]=>
+                    *RECURSION*
+                    ["AuthController"]=>
+                    object(AuthController)#5 (6) {
+                      ["routes"]=>
+                      array(2) {
+                        ["auth.login"]=>
+                        array(3) {
+                          ["function"]=>
+                          string(5) "login"
+                          ["name"]=>
+                          string(10) "auth.login"
+                          ["url"]=>
+                          string(6) "/login"
+                        }
+                        ["auth.logout"]=>
+                        array(4) {
+                          ["function"]=>
+                          string(6) "logout"
+                          ["name"]=>
+                          string(11) "auth.logout"
+                          ["checkBefore"]=>
+                          string(10) "IsLoggedIn"
+                          ["url"]=>
+                          string(7) "/logout"
+                        }
+                      }
+                      ["relativeUrl"]=>
+                      string(5) "/auth"
+                      ["twig"]=>
+                      NULL
+                      ["hasAbsoluteUrls"]=>
+                      bool(false)
+                      ["default":"BaseController":private]=>
+                      array(1) {
+                        ["function"]=>
+                        string(5) "login"
+                      }
+                      ["onCheckFailure":"BaseController":private]=>
+                      array(1) {
+                        ["redirect"]=>
+                        string(4) "home"
+                      }
+                    }
+                  }
+                  ["defaultUrl":"TinyFramework":private]=>
+                  string(5) "/home"
+                  ["hasAbsoluteUrls":"TinyFramework":private]=>
+                  bool(false)
+                  ["debug":"TinyFramework":private]=>
+                  bool(true)
+                  ["customVars":"TinyFramework":private]=>
+                  array(0) {
+                  }
+                  ["controller"]=>
+                  object(AuthController)#5 (6) {
+                    ["routes"]=>
+                    array(2) {
+                      ["auth.login"]=>
+                      array(3) {
+                        ["function"]=>
+                        string(5) "login"
+                        ["name"]=>
+                        string(10) "auth.login"
+                        ["url"]=>
+                        string(6) "/login"
+                      }
+                      ["auth.logout"]=>
+                      array(4) {
+                        ["function"]=>
+                        string(6) "logout"
+                        ["name"]=>
+                        string(11) "auth.logout"
+                        ["checkBefore"]=>
+                        string(10) "IsLoggedIn"
+                        ["url"]=>
+                        string(7) "/logout"
+                      }
+                    }
+                    ["relativeUrl"]=>
+                    string(5) "/auth"
+                    ["twig"]=>
+                    NULL
+                    ["hasAbsoluteUrls"]=>
+                    bool(false)
+                    ["default":"BaseController":private]=>
+                    array(1) {
+                      ["function"]=>
+                      string(5) "login"
+                    }
+                    ["onCheckFailure":"BaseController":private]=>
+                    array(1) {
+                      ["redirect"]=>
+                      string(4) "home"
+                    }
+                  }
+                }
+                ["session"]=>
+                array(3) {
+                  ["_sf2_attributes"]=>
+                  array(2) {
+                    ["user"]=>
+                    array(13) {
+                      ["id"]=>
+                      string(1) "1"
+                      ["firstname"]=>
+                      string(5) "Maxim"
+                      ["surname"]=>
+                      string(6) "Ronsse"
+                      ["password"]=>
+                      string(102) "$6$WVQ2E9r3BdUc$9Jg6Q7d7.d6sVhTuTW4SVtrNG4CzKC9Iyu3JTveTN8afav9ouMJYRnuNXlwxwhqgAXzXVFI.mF1R1zRv.Zch40"
+                      ["email"]=>
+                      string(21) "ronsse.maxim@gmail.co"
+                      ["companyId"]=>
+                      string(1) "1"
+                      ["description"]=>
+                      string(15) "NOPE NOPE NOPEY"
+                      ["function"]=>
+                      string(6) "IT PRO"
+                      ["hasProfilePic"]=>
+                      string(1) "0"
+                      ["quotaId"]=>
+                      string(1) "2"
+                      ["groupsMade"]=>
+                      string(1) "1"
+                      ["admin"]=>
+                      string(1) "1"
+                      ["registered"]=>
+                      string(19) "2015-06-16 20:06:35"
+                    }
+                    ["clipboard"]=>
+                    array(0) {
+                    }
+                  }
+                  ["_sf2_flashes"]=>
+                  array(0) {
+                  }
+                  ["_sf2_meta"]=>
+                  array(3) {
+                    ["u"]=>
+                    int(1439585821)
+                    ["c"]=>
+                    int(1439585690)
+                    ["l"]=>
+                    string(1) "0"
+                  }
+                }
+              }
+              ["tests":protected]=>
+              array(0) {
+              }
+            }
+          }
+          ["hasAbsoluteUrls"]=>
+          bool(false)
+          ["default":"BaseController":private]=>
+          array(1) {
+            ["function"]=>
+            string(4) "home"
+          }
+          ["onCheckFailure":"BaseController":private]=>
+          NULL
+        }
+        [1]=>
+        string(4) "test"
+      }
+      [1]=>
+      &array(1) {
+        [0]=>
+        object(TinyFramework)#1 (12) {
+          ["routes"]=>
+          array(2) {
+            ["/home"]=>
+            string(14) "HomeController"
+            ["/auth"]=>
+            string(14) "AuthController"
+          }
+          ["baseUrl"]=>
+          string(4) "/tf/"
+          ["relativeUrl"]=>
+          array(2) {
+            [0]=>
+            string(0) ""
+            [1]=>
+            string(4) "test"
+          }
+          ["db"]=>
+          array(1) {
+            ["Test"]=>
+            object(DB)#2 (3) {
+              ["pdo":"DB":private]=>
+              NULL
+              ["tableDir"]=>
+              string(14) "includes/Data/"
+              ["tables"]=>
+              array(1) {
+                ["mysqlTable"]=>
+                object(TestTable)#3 (2) {
+                  ["db"]=>
+                  *RECURSION*
+                  ["tableName"]=>
+                  string(10) "mysqlTable"
+                }
+              }
+            }
+          }
+          ["allowEmptyVariables"]=>
+          bool(true)
+          ["controllerDir":"TinyFramework":private]=>
+          string(14) "./controllers/"
+          ["controllers":"TinyFramework":private]=>
+          array(2) {
+            ["HomeController"]=>
+            object(HomeController)#4 (7) {
+              ["itemsPerPage":"HomeController":private]=>
+              int(50)
+              ["routes"]=>
+              array(4) {
+                ["home"]=>
+                array(3) {
+                  ["function"]=>
+                  string(4) "home"
+                  ["name"]=>
+                  string(4) "home"
+                  ["url"]=>
+                  string(1) "/"
+                }
+                ["test"]=>
+                array(3) {
+                  ["function"]=>
+                  string(4) "test"
+                  ["name"]=>
+                  string(4) "test"
+                  ["url"]=>
+                  string(5) "/test"
+                }
+                ["test2"]=>
+                array(3) {
+                  ["function"]=>
+                  string(5) "test2"
+                  ["name"]=>
+                  string(5) "test2"
+                  ["url"]=>
+                  string(23) "/parameter/{var:\regex}"
+                }
+                ["test3"]=>
+                array(3) {
+                  ["function"]=>
+                  string(5) "test3"
+                  ["name"]=>
+                  string(5) "test3"
+                  ["url"]=>
+                  string(28) "/parameterWithoutRegex/{var}"
+                }
+              }
+              ["relativeUrl"]=>
+              string(5) "/home"
+              ["twig"]=>
+              object(Twig_Environment)#7 (26) {
+                ["charset":protected]=>
+                string(5) "UTF-8"
+                ["loader":protected]=>
+                object(Twig_Loader_Filesystem)#6 (2) {
+                  ["paths":protected]=>
+                  array(1) {
+                    ["__main__"]=>
+                    array(1) {
+                      [0]=>
+                      string(9) "templates"
+                    }
+                  }
+                  ["cache":protected]=>
+                  array(0) {
+                  }
+                }
+                ["debug":protected]=>
+                bool(true)
+                ["autoReload":protected]=>
+                bool(true)
+                ["cache":protected]=>
+                bool(false)
+                ["lexer":protected]=>
+                NULL
+                ["parser":protected]=>
+                NULL
+                ["compiler":protected]=>
+                NULL
+                ["baseTemplateClass":protected]=>
+                string(13) "Twig_Template"
+                ["extensions":protected]=>
+                array(4) {
+                  ["core"]=>
+                  object(Twig_Extension_Core)#8 (4) {
+                    ["dateFormats":protected]=>
+                    array(2) {
+                      [0]=>
+                      string(10) "F j, Y H:i"
+                      [1]=>
+                      string(7) "%d days"
+                    }
+                    ["numberFormat":protected]=>
+                    array(3) {
+                      [0]=>
+                      int(0)
+                      [1]=>
+                      string(1) "."
+                      [2]=>
+                      string(1) ","
+                    }
+                    ["timezone":protected]=>
+                    NULL
+                    ["escapers":protected]=>
+                    array(0) {
+                    }
+                  }
+                  ["escaper"]=>
+                  object(Twig_Extension_Escaper)#9 (1) {
+                    ["defaultStrategy":protected]=>
+                    string(4) "html"
+                  }
+                  ["optimizer"]=>
+                  object(Twig_Extension_Optimizer)#10 (1) {
+                    ["optimizers":protected]=>
+                    int(-1)
+                  }
+                  ["debug"]=>
+                  object(Twig_Extension_Debug)#14 (0) {
+                  }
+                }
+                ["parsers":protected]=>
+                NULL
+                ["visitors":protected]=>
+                NULL
+                ["filters":protected]=>
+                NULL
+                ["tests":protected]=>
+                NULL
+                ["functions":protected]=>
+                NULL
+                ["globals":protected]=>
+                NULL
+                ["runtimeInitialized":protected]=>
+                bool(false)
+                ["extensionInitialized":protected]=>
+                bool(false)
+                ["loadedTemplates":protected]=>
+                NULL
+                ["strictVariables":protected]=>
+                bool(false)
+                ["unaryOperators":protected]=>
+                NULL
+                ["binaryOperators":protected]=>
+                NULL
+                ["templateClassPrefix":protected]=>
+                string(15) "__TwigTemplate_"
+                ["functionCallbacks":protected]=>
+                array(0) {
+                }
+                ["filterCallbacks":protected]=>
+                array(0) {
+                }
+                ["staging":protected]=>
+                object(Twig_Extension_Staging)#11 (6) {
+                  ["functions":protected]=>
+                  array(1) {
+                    ["static"]=>
+                    object(Twig_SimpleFunction)#12 (4) {
+                      ["name":protected]=>
+                      string(6) "static"
+                      ["callable":protected]=>
+                      object(Closure)#13 (2) {
+                        ["this"]=>
+                        *RECURSION*
+                        ["parameter"]=>
+                        array(2) {
+                          ["$class"]=>
+                          string(10) "<required>"
+                          ["$property"]=>
+                          string(10) "<required>"
+                        }
+                      }
+                      ["options":protected]=>
+                      array(5) {
+                        ["needs_environment"]=>
+                        bool(false)
+                        ["needs_context"]=>
+                        bool(false)
+                        ["is_safe"]=>
+                        NULL
+                        ["is_safe_callback"]=>
+                        NULL
+                        ["node_class"]=>
+                        string(29) "Twig_Node_Expression_Function"
+                      }
+                      ["arguments":protected]=>
+                      array(0) {
+                      }
+                    }
+                  }
+                  ["filters":protected]=>
+                  array(0) {
+                  }
+                  ["visitors":protected]=>
+                  array(0) {
+                  }
+                  ["tokenParsers":protected]=>
+                  array(0) {
+                  }
+                  ["globals":protected]=>
+                  array(2) {
+                    ["app"]=>
+                    *RECURSION*
+                    ["session"]=>
+                    array(3) {
+                      ["_sf2_attributes"]=>
+                      array(2) {
+                        ["user"]=>
+                        array(13) {
+                          ["id"]=>
+                          string(1) "1"
+                          ["firstname"]=>
+                          string(5) "Maxim"
+                          ["surname"]=>
+                          string(6) "Ronsse"
+                          ["password"]=>
+                          string(102) "$6$WVQ2E9r3BdUc$9Jg6Q7d7.d6sVhTuTW4SVtrNG4CzKC9Iyu3JTveTN8afav9ouMJYRnuNXlwxwhqgAXzXVFI.mF1R1zRv.Zch40"
+                          ["email"]=>
+                          string(21) "ronsse.maxim@gmail.co"
+                          ["companyId"]=>
+                          string(1) "1"
+                          ["description"]=>
+                          string(15) "NOPE NOPE NOPEY"
+                          ["function"]=>
+                          string(6) "IT PRO"
+                          ["hasProfilePic"]=>
+                          string(1) "0"
+                          ["quotaId"]=>
+                          string(1) "2"
+                          ["groupsMade"]=>
+                          string(1) "1"
+                          ["admin"]=>
+                          string(1) "1"
+                          ["registered"]=>
+                          string(19) "2015-06-16 20:06:35"
+                        }
+                        ["clipboard"]=>
+                        array(0) {
+                        }
+                      }
+                      ["_sf2_flashes"]=>
+                      array(0) {
+                      }
+                      ["_sf2_meta"]=>
+                      array(3) {
+                        ["u"]=>
+                        int(1439585821)
+                        ["c"]=>
+                        int(1439585690)
+                        ["l"]=>
+                        string(1) "0"
+                      }
+                    }
+                  }
+                  ["tests":protected]=>
+                  array(0) {
+                  }
+                }
+              }
+              ["hasAbsoluteUrls"]=>
+              bool(false)
+              ["default":"BaseController":private]=>
+              array(1) {
+                ["function"]=>
+                string(4) "home"
+              }
+              ["onCheckFailure":"BaseController":private]=>
+              NULL
+            }
+            ["AuthController"]=>
+            object(AuthController)#5 (6) {
+              ["routes"]=>
+              array(2) {
+                ["auth.login"]=>
+                array(3) {
+                  ["function"]=>
+                  string(5) "login"
+                  ["name"]=>
+                  string(10) "auth.login"
+                  ["url"]=>
+                  string(6) "/login"
+                }
+                ["auth.logout"]=>
+                array(4) {
+                  ["function"]=>
+                  string(6) "logout"
+                  ["name"]=>
+                  string(11) "auth.logout"
+                  ["checkBefore"]=>
+                  string(10) "IsLoggedIn"
+                  ["url"]=>
+                  string(7) "/logout"
+                }
+              }
+              ["relativeUrl"]=>
+              string(5) "/auth"
+              ["twig"]=>
+              NULL
+              ["hasAbsoluteUrls"]=>
+              bool(false)
+              ["default":"BaseController":private]=>
+              array(1) {
+                ["function"]=>
+                string(5) "login"
+              }
+              ["onCheckFailure":"BaseController":private]=>
+              array(1) {
+                ["redirect"]=>
+                string(4) "home"
+              }
+            }
+          }
+          ["defaultUrl":"TinyFramework":private]=>
+          string(5) "/home"
+          ["hasAbsoluteUrls":"TinyFramework":private]=>
+          bool(false)
+          ["debug":"TinyFramework":private]=>
+          bool(true)
+          ["customVars":"TinyFramework":private]=>
+          array(0) {
+          }
+          ["controller"]=>
+          object(AuthController)#5 (6) {
+            ["routes"]=>
+            array(2) {
+              ["auth.login"]=>
+              array(3) {
+                ["function"]=>
+                string(5) "login"
+                ["name"]=>
+                string(10) "auth.login"
+                ["url"]=>
+                string(6) "/login"
+              }
+              ["auth.logout"]=>
+              array(4) {
+                ["function"]=>
+                string(6) "logout"
+                ["name"]=>
+                string(11) "auth.logout"
+                ["checkBefore"]=>
+                string(10) "IsLoggedIn"
+                ["url"]=>
+                string(7) "/logout"
+              }
+            }
+            ["relativeUrl"]=>
+            string(5) "/auth"
+            ["twig"]=>
+            NULL
+            ["hasAbsoluteUrls"]=>
+            bool(false)
+            ["default":"BaseController":private]=>
+            array(1) {
+              ["function"]=>
+              string(5) "login"
+            }
+            ["onCheckFailure":"BaseController":private]=>
+            array(1) {
+              ["redirect"]=>
+              string(4) "home"
+            }
+          }
+        }
+      }
+    }
+  }
+  [3]=>
+  array(6) {
+    ["file"]=>
+    string(45) "C:\xampp\htdocs\tf\includes\TinyFramework.php"
+    ["line"]=>
+    int(280)
+    ["function"]=>
+    string(3) "Run"
+    ["class"]=>
+    string(14) "BaseController"
+    ["type"]=>
+    string(2) "->"
+    ["args"]=>
+    array(1) {
+      [0]=>
+      object(TinyFramework)#1 (12) {
+        ["routes"]=>
+        array(2) {
+          ["/home"]=>
+          string(14) "HomeController"
+          ["/auth"]=>
+          string(14) "AuthController"
+        }
+        ["baseUrl"]=>
+        string(4) "/tf/"
+        ["relativeUrl"]=>
+        array(2) {
+          [0]=>
+          string(0) ""
+          [1]=>
+          string(4) "test"
+        }
+        ["db"]=>
+        array(1) {
+          ["Test"]=>
+          object(DB)#2 (3) {
+            ["pdo":"DB":private]=>
+            NULL
+            ["tableDir"]=>
+            string(14) "includes/Data/"
+            ["tables"]=>
+            array(1) {
+              ["mysqlTable"]=>
+              object(TestTable)#3 (2) {
+                ["db"]=>
+                *RECURSION*
+                ["tableName"]=>
+                string(10) "mysqlTable"
+              }
+            }
+          }
+        }
+        ["allowEmptyVariables"]=>
+        bool(true)
+        ["controllerDir":"TinyFramework":private]=>
+        string(14) "./controllers/"
+        ["controllers":"TinyFramework":private]=>
+        array(2) {
+          ["HomeController"]=>
+          object(HomeController)#4 (7) {
+            ["itemsPerPage":"HomeController":private]=>
+            int(50)
+            ["routes"]=>
+            array(4) {
+              ["home"]=>
+              array(3) {
+                ["function"]=>
+                string(4) "home"
+                ["name"]=>
+                string(4) "home"
+                ["url"]=>
+                string(1) "/"
+              }
+              ["test"]=>
+              array(3) {
+                ["function"]=>
+                string(4) "test"
+                ["name"]=>
+                string(4) "test"
+                ["url"]=>
+                string(5) "/test"
+              }
+              ["test2"]=>
+              array(3) {
+                ["function"]=>
+                string(5) "test2"
+                ["name"]=>
+                string(5) "test2"
+                ["url"]=>
+                string(23) "/parameter/{var:\regex}"
+              }
+              ["test3"]=>
+              array(3) {
+                ["function"]=>
+                string(5) "test3"
+                ["name"]=>
+                string(5) "test3"
+                ["url"]=>
+                string(28) "/parameterWithoutRegex/{var}"
+              }
+            }
+            ["relativeUrl"]=>
+            string(5) "/home"
+            ["twig"]=>
+            object(Twig_Environment)#7 (26) {
+              ["charset":protected]=>
+              string(5) "UTF-8"
+              ["loader":protected]=>
+              object(Twig_Loader_Filesystem)#6 (2) {
+                ["paths":protected]=>
+                array(1) {
+                  ["__main__"]=>
+                  array(1) {
+                    [0]=>
+                    string(9) "templates"
+                  }
+                }
+                ["cache":protected]=>
+                array(0) {
+                }
+              }
+              ["debug":protected]=>
+              bool(true)
+              ["autoReload":protected]=>
+              bool(true)
+              ["cache":protected]=>
+              bool(false)
+              ["lexer":protected]=>
+              NULL
+              ["parser":protected]=>
+              NULL
+              ["compiler":protected]=>
+              NULL
+              ["baseTemplateClass":protected]=>
+              string(13) "Twig_Template"
+              ["extensions":protected]=>
+              array(4) {
+                ["core"]=>
+                object(Twig_Extension_Core)#8 (4) {
+                  ["dateFormats":protected]=>
+                  array(2) {
+                    [0]=>
+                    string(10) "F j, Y H:i"
+                    [1]=>
+                    string(7) "%d days"
+                  }
+                  ["numberFormat":protected]=>
+                  array(3) {
+                    [0]=>
+                    int(0)
+                    [1]=>
+                    string(1) "."
+                    [2]=>
+                    string(1) ","
+                  }
+                  ["timezone":protected]=>
+                  NULL
+                  ["escapers":protected]=>
+                  array(0) {
+                  }
+                }
+                ["escaper"]=>
+                object(Twig_Extension_Escaper)#9 (1) {
+                  ["defaultStrategy":protected]=>
+                  string(4) "html"
+                }
+                ["optimizer"]=>
+                object(Twig_Extension_Optimizer)#10 (1) {
+                  ["optimizers":protected]=>
+                  int(-1)
+                }
+                ["debug"]=>
+                object(Twig_Extension_Debug)#14 (0) {
+                }
+              }
+              ["parsers":protected]=>
+              NULL
+              ["visitors":protected]=>
+              NULL
+              ["filters":protected]=>
+              NULL
+              ["tests":protected]=>
+              NULL
+              ["functions":protected]=>
+              NULL
+              ["globals":protected]=>
+              NULL
+              ["runtimeInitialized":protected]=>
+              bool(false)
+              ["extensionInitialized":protected]=>
+              bool(false)
+              ["loadedTemplates":protected]=>
+              NULL
+              ["strictVariables":protected]=>
+              bool(false)
+              ["unaryOperators":protected]=>
+              NULL
+              ["binaryOperators":protected]=>
+              NULL
+              ["templateClassPrefix":protected]=>
+              string(15) "__TwigTemplate_"
+              ["functionCallbacks":protected]=>
+              array(0) {
+              }
+              ["filterCallbacks":protected]=>
+              array(0) {
+              }
+              ["staging":protected]=>
+              object(Twig_Extension_Staging)#11 (6) {
+                ["functions":protected]=>
+                array(1) {
+                  ["static"]=>
+                  object(Twig_SimpleFunction)#12 (4) {
+                    ["name":protected]=>
+                    string(6) "static"
+                    ["callable":protected]=>
+                    object(Closure)#13 (2) {
+                      ["this"]=>
+                      *RECURSION*
+                      ["parameter"]=>
+                      array(2) {
+                        ["$class"]=>
+                        string(10) "<required>"
+                        ["$property"]=>
+                        string(10) "<required>"
+                      }
+                    }
+                    ["options":protected]=>
+                    array(5) {
+                      ["needs_environment"]=>
+                      bool(false)
+                      ["needs_context"]=>
+                      bool(false)
+                      ["is_safe"]=>
+                      NULL
+                      ["is_safe_callback"]=>
+                      NULL
+                      ["node_class"]=>
+                      string(29) "Twig_Node_Expression_Function"
+                    }
+                    ["arguments":protected]=>
+                    array(0) {
+                    }
+                  }
+                }
+                ["filters":protected]=>
+                array(0) {
+                }
+                ["visitors":protected]=>
+                array(0) {
+                }
+                ["tokenParsers":protected]=>
+                array(0) {
+                }
+                ["globals":protected]=>
+                array(2) {
+                  ["app"]=>
+                  *RECURSION*
+                  ["session"]=>
+                  array(3) {
+                    ["_sf2_attributes"]=>
+                    array(2) {
+                      ["user"]=>
+                      array(13) {
+                        ["id"]=>
+                        string(1) "1"
+                        ["firstname"]=>
+                        string(5) "Maxim"
+                        ["surname"]=>
+                        string(6) "Ronsse"
+                        ["password"]=>
+                        string(102) "$6$WVQ2E9r3BdUc$9Jg6Q7d7.d6sVhTuTW4SVtrNG4CzKC9Iyu3JTveTN8afav9ouMJYRnuNXlwxwhqgAXzXVFI.mF1R1zRv.Zch40"
+                        ["email"]=>
+                        string(21) "ronsse.maxim@gmail.co"
+                        ["companyId"]=>
+                        string(1) "1"
+                        ["description"]=>
+                        string(15) "NOPE NOPE NOPEY"
+                        ["function"]=>
+                        string(6) "IT PRO"
+                        ["hasProfilePic"]=>
+                        string(1) "0"
+                        ["quotaId"]=>
+                        string(1) "2"
+                        ["groupsMade"]=>
+                        string(1) "1"
+                        ["admin"]=>
+                        string(1) "1"
+                        ["registered"]=>
+                        string(19) "2015-06-16 20:06:35"
+                      }
+                      ["clipboard"]=>
+                      array(0) {
+                      }
+                    }
+                    ["_sf2_flashes"]=>
+                    array(0) {
+                    }
+                    ["_sf2_meta"]=>
+                    array(3) {
+                      ["u"]=>
+                      int(1439585821)
+                      ["c"]=>
+                      int(1439585690)
+                      ["l"]=>
+                      string(1) "0"
+                    }
+                  }
+                }
+                ["tests":protected]=>
+                array(0) {
+                }
+              }
+            }
+            ["hasAbsoluteUrls"]=>
+            bool(false)
+            ["default":"BaseController":private]=>
+            array(1) {
+              ["function"]=>
+              string(4) "home"
+            }
+            ["onCheckFailure":"BaseController":private]=>
+            NULL
+          }
+          ["AuthController"]=>
+          object(AuthController)#5 (6) {
+            ["routes"]=>
+            array(2) {
+              ["auth.login"]=>
+              array(3) {
+                ["function"]=>
+                string(5) "login"
+                ["name"]=>
+                string(10) "auth.login"
+                ["url"]=>
+                string(6) "/login"
+              }
+              ["auth.logout"]=>
+              array(4) {
+                ["function"]=>
+                string(6) "logout"
+                ["name"]=>
+                string(11) "auth.logout"
+                ["checkBefore"]=>
+                string(10) "IsLoggedIn"
+                ["url"]=>
+                string(7) "/logout"
+              }
+            }
+            ["relativeUrl"]=>
+            string(5) "/auth"
+            ["twig"]=>
+            NULL
+            ["hasAbsoluteUrls"]=>
+            bool(false)
+            ["default":"BaseController":private]=>
+            array(1) {
+              ["function"]=>
+              string(5) "login"
+            }
+            ["onCheckFailure":"BaseController":private]=>
+            array(1) {
+              ["redirect"]=>
+              string(4) "home"
+            }
+          }
+        }
+        ["defaultUrl":"TinyFramework":private]=>
+        string(5) "/home"
+        ["hasAbsoluteUrls":"TinyFramework":private]=>
+        bool(false)
+        ["debug":"TinyFramework":private]=>
+        bool(true)
+        ["customVars":"TinyFramework":private]=>
+        array(0) {
+        }
+        ["controller"]=>
+        object(AuthController)#5 (6) {
+          ["routes"]=>
+          array(2) {
+            ["auth.login"]=>
+            array(3) {
+              ["function"]=>
+              string(5) "login"
+              ["name"]=>
+              string(10) "auth.login"
+              ["url"]=>
+              string(6) "/login"
+            }
+            ["auth.logout"]=>
+            array(4) {
+              ["function"]=>
+              string(6) "logout"
+              ["name"]=>
+              string(11) "auth.logout"
+              ["checkBefore"]=>
+              string(10) "IsLoggedIn"
+              ["url"]=>
+              string(7) "/logout"
+            }
+          }
+          ["relativeUrl"]=>
+          string(5) "/auth"
+          ["twig"]=>
+          NULL
+          ["hasAbsoluteUrls"]=>
+          bool(false)
+          ["default":"BaseController":private]=>
+          array(1) {
+            ["function"]=>
+            string(5) "login"
+          }
+          ["onCheckFailure":"BaseController":private]=>
+          array(1) {
+            ["redirect"]=>
+            string(4) "home"
+          }
+        }
+      }
+    }
+  }
+  [4]=>
+  array(6) {
+    ["file"]=>
+    string(45) "C:\xampp\htdocs\tf\includes\TinyFramework.php"
+    ["line"]=>
+    int(81)
+    ["function"]=>
+    string(13) "getController"
+    ["class"]=>
+    string(13) "TinyFramework"
+    ["type"]=>
+    string(2) "->"
+    ["args"]=>
+    array(0) {
+    }
+  }
+  [5]=>
+  array(6) {
+    ["file"]=>
+    string(28) "C:\xampp\htdocs\tf\index.php"
+    ["line"]=>
+    int(29)
+    ["function"]=>
+    string(3) "Run"
+    ["class"]=>
+    string(13) "TinyFramework"
+    ["type"]=>
+    string(2) "->"
+    ["args"]=>
+    array(0) {
+    }
+  }
+}
