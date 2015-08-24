@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/IDBTable.php';
+require_once 'includes/Extensions/DB/IDBTable.php';
 
 // an example of a custom Table class, used to create custom sql code
 class TestTable extends BaseTable implements IDBTable {

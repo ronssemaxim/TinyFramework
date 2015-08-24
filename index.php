@@ -20,7 +20,7 @@ $db = $fm->AddDb(array(
 // add db tables (optional), if user is trying to access a table that was not added in this file, 
 // the code will automatically try to add the table. 
 // @see IDBTable.php for default functions; @see DB.php, function GetTable for details about the auto-creation
-$db->AddTable('mysqlTable', 'TestTable'); 
+$db->AddTable('mysqlTable', 'TestTable');
 
 $fm->Run(); // finally, run the framework
 ?>

@@ -7,7 +7,7 @@
 * 
 * 
 */
-require_once 'includes/IDBTable.php';
+require_once 'includes/Extensions/DB/IDBTable.php';
 
 // "extends" keyword to prevent the user having to access inner variables, eg: $db->pdoObject->...
 class DB extends PDO implements ArrayAccess {
