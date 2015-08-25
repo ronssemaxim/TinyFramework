@@ -26,9 +26,9 @@ class TinyFramework { // ArrayAccess to enable the user to do $framework['var']
 	// 			'/auth'   => 'AuthController',
 	// 			'default' => '/home'
 	// 		]
-	//	$debug: true/false; shows or hides errors
-	//  $autorun: automatically run the controller
-	public function __construct($routes = array(), $options = array(), $autorun = false, $rethrowException = true) {
+	// $options: array containing name-value options
+	// $autorun: automatically run the controller (or manually call Run())
+	public function __construct($routes = array(), $options = array(), $autorun = false) {
 		session_start();
 		$this->routes = $routes;
 
@@ -50,8 +50,7 @@ class TinyFramework { // ArrayAccess to enable the user to do $framework['var']
 			if(file_exists($dir.'/Framework.php')) {
 				$contents = file_get_contents($dir.'/Framework.php');
 				$classes = $this->get_php_classes($contents);
-				$contents = substr($contents, 5);
-				eval($contents);
+				require_once $dir.'/Framework.php';
 
 				if(count($classes) >= 1) {
 					$name = $classes[0];
@@ -65,12 +64,6 @@ class TinyFramework { // ArrayAccess to enable the user to do $framework['var']
 					}
 					$this->extensions[] = $obj;
 				}
-				else if($this->debug) {
-					echo 'The initilization file in the directory "'.$dir. '" does not seem to contain a valid initilization class.';
-				}
-			}
-			else if($this->debug) {
-				echo 'The extension in the directory "'.$dir. '" does not seem to contain a valid initilization class "Framework.php".';
 			}
 		}
 	}

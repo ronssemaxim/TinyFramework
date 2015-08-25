@@ -3,7 +3,7 @@
 *	Framework.php, extension for TinyFramework; made by Maxim Ronsse (ronsse.maxim@gmail.com) as an extension to access a database
 *	
 */
-include 'includes/Extensions/DB/DB.php';
+include dirname(__FILE__) . '/DB.php';
 
 class TFExtensionDB { // ArrayAccess to enable the user to do $framework['var']
 	public function initialize($framework) {

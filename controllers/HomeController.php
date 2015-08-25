@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/Extensions/Forms/validator.php';
+require_once 'includes/validator.php';
 require_once 'includes/IController.php';
 
 class HomeController extends BaseController implements IController {

@@ -2,7 +2,8 @@
 /*
 * form.php: used to create & validate a form
 */
-require_once 'includes/Extensions/Forms/formElement.php';
+require_once dirname(__FILE__) . '/formElement.php';
+//require_once 'includes/Extensions/Forms/formElement.php';
 class Form {
 	public $elements = array(); 		// list of elements within this form
 	private $method,					// name of the required method (uppercase)
