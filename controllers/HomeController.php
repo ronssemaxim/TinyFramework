@@ -1,8 +1,6 @@
 <?php
-require_once 'includes/validator.php';
+require_once 'includes/Extensions/Forms/validator.php';
 require_once 'includes/IController.php';
-require_once 'includes/form.php';
-use \Kal\data;
 
 class HomeController extends BaseController implements IController {
 	private $itemsPerPage = 50;

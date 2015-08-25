@@ -6,7 +6,7 @@
 
 class TFExtensionDebug { // ArrayAccess to enable the user to do $framework['var']
 	public function initialize($framework) {
-		$framework->debug = false;
+		$framework->debug = true;
 
 		// set handler for fatal errors
 		//register_shutdown_function(array(&$this, "fatalHandler"));
@@ -318,7 +318,7 @@ $result = ob_get_clean();
 	*/
 	public function fatalHandler($framework, $errno, $errstr, $errfile, $errline) {
 		$e = new Error($errstr, $errno, $errfile, $errline = $errline);
-		TinyFramework::handleException($e);
+		$this->handleException($framework, $e);
 		return true;
 	}
 }

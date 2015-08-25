@@ -1,8 +1,6 @@
 <?php
-require_once 'includes/validator.php';
+require_once 'includes/Extensions/Forms/validator.php';
 require_once 'includes/IController.php';
-require_once 'includes/form.php';
-use \Kal\data;
 
 class AuthController extends BaseController implements IController {
 	function __construct($app) {
@@ -28,7 +26,7 @@ class AuthController extends BaseController implements IController {
 	}
 
 	public function login($app) {
-		$form = new Form();
+		$form = $app->createForm();
 		$el = $form->addElement('username', Form::TEXT, 'Username');
 		$el->min = 3;
 		$el->max = 8;

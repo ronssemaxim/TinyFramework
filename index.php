@@ -7,7 +7,12 @@ $fm = new TinyFramework(array(
 		'/home' => 'HomeController',
 		'/auth' => 'AuthController',
 		'default' => '/home'
-	), true); // set to false on production
+	), array(
+		'debug' => true
+	)); // set to false on production
+
+$fm->debug = true;
+
 $db = $fm->AddDb(array(
 	'name' => 'Test',
 	'driver' => 'mysql',
@@ -16,6 +21,7 @@ $db = $fm->AddDb(array(
 	'user' => 'username',
 	'pass' => 'password'
 )); // add DB connection (required)
+
 
 // add db tables (optional), if user is trying to access a table that was not added in this file, 
 // the code will automatically try to add the table. 

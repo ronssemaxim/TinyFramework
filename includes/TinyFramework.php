@@ -13,7 +13,8 @@ class TinyFramework { // ArrayAccess to enable the user to do $framework['var']
 			$controllers = array(),				// list of controllers; all of them will be called, but the 'run' function is only called when the user's request requires further processing within the controller
 			$defaultUrl,						// default controller to call (based on url)
 			$hasAbsoluteUrls = false,			// another hasAbsoluteUrls variable here; improves processing speed
-			$extensions = array();				// array containing all the extension objects
+			$extensions = array(),				// array containing all the extension objects
+			$extensionSkipFunctions = array();	// functions to skip when using extensions
 
 	private $customVars = array();
 
@@ -27,12 +28,16 @@ class TinyFramework { // ArrayAccess to enable the user to do $framework['var']
 	// 		]
 	//	$debug: true/false; shows or hides errors
 	//  $autorun: automatically run the controller
-	public function __construct($routes = array(), $rethrowException = true, $autorun = false) {
+	public function __construct($routes = array(), $options = array(), $autorun = false, $rethrowException = true) {
 		session_start();
 		$this->routes = $routes;
 
 		// load extensions
 		$this->loadExtensions();
+
+		foreach ($options as $key => $value) {
+			if(isset($this->$key)) $this->$key = $value;
+		}
 
 		// run
 		if($autorun)
@@ -51,8 +56,12 @@ class TinyFramework { // ArrayAccess to enable the user to do $framework['var']
 				if(count($classes) >= 1) {
 					$name = $classes[0];
 					$obj = new $name();
-					if(method_exists($obj, 'initialize')) {
-						$obj->initialize($this);
+					if(method_exists($obj, 'initialize')) $obj->initialize($this);
+					if(method_exists($obj, 'getSkipFunctions')) {
+						$skip = $obj->getSkipFunctions();
+						foreach ($skip as $func) {
+							$this->extensionSkipFunctions[] = $func;
+						}
 					}
 					$this->extensions[] = $obj;
 				}
@@ -272,7 +281,7 @@ class TinyFramework { // ArrayAccess to enable the user to do $framework['var']
 	// gets called each time an unknown function is called
 	function __call($func, $params){
 		foreach($this->extensions as $ext) {
-			if(method_exists($ext, $func)) {
+			if(method_exists($ext, $func) && !in_array($func, $this->extensionSkipFunctions)) {
 				array_unshift($params, $this);
 				return call_user_func_array(array($ext, $func), $params);
 			}
