@@ -80,7 +80,7 @@ class BaseController {
 					}
 				}
 				if(array_key_exists('checkBefore', $value) && $exec)
-					$exec = call_user_func_array(array($this, $value['checkBefore']), array($this));
+					$exec = call_user_func_array(array($this, $value['checkBefore']), array($app));
 
 				if($exec === true) {
 					$this->Preload($app);
@@ -103,11 +103,11 @@ class BaseController {
 			// default
 			$exec = true;
 			if(array_key_exists('checkBefore', $this->default))
-				$exec = call_user_func_array(array($this, $this->default['checkBefore']), array($this));
+				$exec = call_user_func_array(array($this, $this->default['checkBefore']), array($app));
 
 			if($exec === true) {
 				$this->Preload($app);
-				return call_user_func_array(array($this, $this->default['function']), array($this));
+				return call_user_func_array(array($this, $this->default['function']), array($app));
 			}
 			else
 			if($this->onCheckFailure != null) {

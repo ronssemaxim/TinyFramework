@@ -4,7 +4,7 @@
 *	
 */
 
-class TinyFramework { // ArrayAccess to enable the user to do $framework['var']
+class TinyFramework implements ArrayAccess { // ArrayAccess to enable the user to do $framework['var']
 	public  $routes,							// list of routes which are linked to the controllers (not controller specific routes)
 			$baseUrl, $relativeUrl, 			// eg http//url/real/dir/controller/dir : baseUrl = /real/der relativeUrl =  /controller/dir
 			$allowEmptyVariables = true;
@@ -207,7 +207,7 @@ class TinyFramework { // ArrayAccess to enable the user to do $framework['var']
 					$passPath = array_slice($elements, count($tmpPath)); // path to pass to the controller
 					array_unshift($passPath, ''); // prepend '' again
 					$this->relativeUrl = $passPath; // set relative url, so the controller can use this variable
-					echo $this->controllers[$this->routes[$check]]->Run($this);	// who run this controller?
+					echo $this->controllers[$this->routes[$check]]->Run($this);
 					return; // break the loop after the running is complete
 				}
 				if($this->hasAbsoluteUrls && array_key_exists('/'.$check, $this->routes)) { // find absolute url's
@@ -227,7 +227,7 @@ class TinyFramework { // ArrayAccess to enable the user to do $framework['var']
 
 	/* array access. @TODO: 'implements ArrayAccess', seems to go in a loop somewhere  */
 	public function offsetExists ($offset) {
-		if($this->propertyExists($offset, false))  // return true, even if property is private
+		if($this->propertyExists($offset))  // return true, even if property is private
 			return true;
 		else 
 			return array_key_exists($offset, $this->customVars);

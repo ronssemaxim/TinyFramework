@@ -10,9 +10,9 @@ class TFExtensionDebug { // ArrayAccess to enable the user to do $framework['var
 
 		// set handler for fatal errors
 		//register_shutdown_function(array(&$this, "fatalHandler"));
-		set_error_handler(array(&$framework, "fatalHandler"));
+		set_error_handler(array(&$this, "fatalHandler"));
 
-		// set debugging options, just in case a fatal error occurs
+		// set debugging options, just in case a fatal unhandleable error occurs
 		if($framework->debug) {
 			ini_set('error_reporting', -1);
 			ini_set('display_errors', 1);
@@ -41,14 +41,14 @@ class TFExtensionDebug { // ArrayAccess to enable the user to do $framework['var
 
 		$logId = $e == null ? 'Unknown' : chr(mt_rand(97, 122)).substr(md5(time()), 1);
 		// log to file
-		$myFile = __DIR__ . "/../logs/error.txt";
+		$myFile = dirname(__FILE__) . "/../logs/error.txt";
 		$fh = fopen($myFile, 'a');
 		$stringData = date('d/m/Y H:i:s')."\t".(is_a($e, 'Error') ? 'Fatal ' : '')."Error thrown in ".$file." on line ".$line.": ".$msg.". Log id: $logId\n";
 		fwrite($fh, $stringData);
 		fclose($fh);
 		if($e != null) {			
 			// details
-			$myFile = __DIR__ . "/../logs/errorDetails/$logId.txt";
+			$myFile = dirname(__FILE__) . "/../logs/errorDetails/$logId.txt";
 			$fh = fopen($myFile, 'a');
 			$stringData = "Date: ".date('d/m/Y H:i:s')."\n";
 			$stringData .= (is_a($e, 'Error') ? 'Fatal ' : '')."Error thrown in ".$file." on line ".$line.": ".$msg."\n";
