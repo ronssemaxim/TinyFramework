@@ -4,9 +4,13 @@
 *	
 */
 
-class TFExtensionDebug { // ArrayAccess to enable the user to do $framework['var']
+class TFExtensionDebug {
+	public $rethrowException;
+	private $framework;
 	public function initialize($framework) {
+		$this->framework = $framework;
 		$framework->debug = true;
+		$this->rethrowException = false;
 
 		// set handler for fatal errors
 		//register_shutdown_function(array(&$this, "fatalHandler"));
@@ -27,12 +31,10 @@ class TFExtensionDebug { // ArrayAccess to enable the user to do $framework['var
 	* handle the exception and take actions
 	*/
 	public function handleException($framework, $e) {
-		if($e == null) {
-			$file = 'Unknown';
-			$line = 'Unknown';
-			$msg = 'Fatal error';
-		}
-		else {
+		$file = 'Unknown';
+		$line = 'Unknown';
+		$msg = 'Fatal error';
+		if($e != null) {
 			$file = $e->getFile();
 			$line = $e->getLine();
 			$msg = $e->getMessage();
@@ -41,17 +43,18 @@ class TFExtensionDebug { // ArrayAccess to enable the user to do $framework['var
 
 		$logId = $e == null ? 'Unknown' : chr(mt_rand(97, 122)).substr(md5(time()), 1);
 		// log to file
-		$myFile = dirname(__FILE__) . "/../logs/error.txt";
+
+		$myFile = dirname($_SERVER['SCRIPT_FILENAME']) . "/logs/error.txt";
 		$fh = fopen($myFile, 'a');
-		$stringData = date('d/m/Y H:i:s')."\t".(is_a($e, 'Error') ? 'Fatal ' : '')."Error thrown in ".$file." on line ".$line.": ".$msg.". Log id: $logId\n";
+		$stringData = date('d/m/Y H:i:s')."\t".(is_a($e, 'Error') ? 'Fatal ' : '')."Error thrown in ".(is_string($file) ? $file : 'Unknown')." on line ".(is_int($line) ? $line : 'Unknown').": ".(is_string($msg) ? $msg: 'Unknown').". Log id: $logId\n";
 		fwrite($fh, $stringData);
 		fclose($fh);
 		if($e != null) {			
 			// details
-			$myFile = dirname(__FILE__) . "/../logs/errorDetails/$logId.txt";
+			$myFile = dirname($_SERVER['SCRIPT_FILENAME']) . "/logs/errorDetails/$logId.txt";
 			$fh = fopen($myFile, 'a');
 			$stringData = "Date: ".date('d/m/Y H:i:s')."\n";
-			$stringData .= (is_a($e, 'Error') ? 'Fatal ' : '')."Error thrown in ".$file." on line ".$line.": ".$msg."\n";
+			$stringData .= (is_a($e, 'Error') ? 'Fatal ' : '')."Error thrown in ".(is_string($file) ? $file : 'Unknown')." on line ".(is_int($line) ? $line : 'Unknown').": ".(is_string($msg) ? $msg: 'Unknown')."\n";
 			$stringData .= "Log id: $logId\n\n";
 
 ob_start();
@@ -67,7 +70,7 @@ $result = ob_get_clean();
 			$this->printDebugTrace($e);
 		}
 		else
-		if($rethrowException == true) { // rethrow exception if desired
+		if($this->rethrowException == true) { // rethrow exception if desired
 			throw $e;
 		}
 		else { // default error page
@@ -76,21 +79,6 @@ $result = ob_get_clean();
 			<head>
 				<title>Error 500</title>
 				<meta charset="utf8" />
-				<style>
-					body {
-						background-color: #111;
-						background-repeat: no-repeat, repeat;
-						background-position: 0 0;
-						background-size: 100% auto, 400px 400px;
-						padding: 20px;
-						font-family: "URW Palladio L",Palatino,"Book Antiqua","Palatino Linotype",serif;
-						color: rgb(232,220,188);
-						font-size: 13px;
-						letter-spacing: 1px;
-						max-width: 1024px;
-						margin: 0 auto;
-					}
-				</style>
 			</head>
 
 			<body>
@@ -101,6 +89,8 @@ $result = ob_get_clean();
 			</html>
 			<?php
 		}
+
+		exit(0);
 	}
 
 	// Print a user friendly error page, using the given $e exception
@@ -316,9 +306,9 @@ $result = ob_get_clean();
 	/**
 	* get's called when a fatal exception occures
 	*/
-	public function fatalHandler($framework, $errno, $errstr, $errfile, $errline) {
+	public function fatalHandler($errno, $errstr, $errfile, $errline) {
 		$e = new Error($errstr, $errno, $errfile, $errline = $errline);
-		$this->handleException($framework, $e);
+		$this->handleException($this->framework, $e);
 		return true;
 	}
 }
